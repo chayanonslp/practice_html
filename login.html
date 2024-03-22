@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Noto Sans Thai", sans-serif;
+        font-optical-sizing: auto;
+        /* font-weight: 100; */
+        /* Bold */
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+
+    .body {
+        width: 100%;
+        height: 100vh;
+        border-radius: 1.5rem;
+    }
+
+    .video-wrapper {
+        position: relative;
+        /* Telling our absolute positioned video to be relative to this element */
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        /* Will not allow the video to overflow the container */
+        text-align: center;
+        /* Centering the container's content vertically and horizontally */
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: blur(2px);
+    }
+
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .bg-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .login-container {
+        position: absolute;
+        width: 25rem;
+        height: 30rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 1.5rem;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 1.5rem;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .logo {
+        position: relative;
+        background-image: url('https://scontent.fbkk22-6.fna.fbcdn.net/v/t39.30808-6/277705721_2753094534985020_7032653780866057810_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFegTlxWidviB5WAw4wzX-KK4oqY_kgpsMriipj-SCmw-jCWTm1rNPRzaW-Xp3a8lD9l0kItI4mKaFJAwqSRrPw&_nc_ohc=uXU31jWnm54AX9V9Sjf&_nc_ht=scontent.fbkk22-6.fna&oh=00_AfCKIss4UmQFTRfMF3a8p3wDJ9kcfVAii8DT24ZRNm_WFw&oe=66022026');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+    
+        height: 40%;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        left: 20%;
+    }
+
+    .logo-detail {
+        /* display: block; */
+        position: relative;
+        top: 45%;
+        left: 40%;
+    }
+</style>
+
+<body>
+    <div class="body">
+        <div class="video-wrapper">
+            <video playsinline autoplay muted loop poster="cake.jpg" width="100%">
+                <source src="background/pexels_videos_1851190.mp4" type="video/mp4">
+
+            </video>
+        </div>
+        <div class="login-container">
+            <div class="logo">
+                <p class="logo-detail"></p>
+
+            </div>
+            <label for="uname"><b>Username </b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+        </div>
+    </div>
+</body>
+
+</html>
